@@ -1,0 +1,43 @@
+KEYxMASTER — SABSE AASAN DEPLOY METHOD
+
+1. Is ZIP ko download karke extract karein.
+
+2. GitHub.com par New repository banayein.
+
+3. ZIP ke andar ki files ko upload karein. Folder upload na karein.
+   GitHub repository ke main/root page par ye files directly dikhni chahiye:
+
+   main.js
+   main.py
+   commands.bundle.json
+   package.json
+   package-lock.json
+   railway.json
+   .env.example
+   .gitignore
+   README_RAILWAY.md
+   START_HERE_HINDI.txt
+
+4. Railway.com par New Project → Deploy from GitHub Repo select karein.
+
+5. Repository select karke Deploy karein.
+
+6. Railway ke Variables tab mein sirf ye add karein:
+
+   BOT_TOKEN = BotFather ka Telegram bot token
+   ADMIN_ID = 7088682169
+   ZAP_KEY = aapka ZAP key
+
+7. Start Command blank chhod sakte hain. Railway automatically npm start
+   chalayega. Agar command maange to exact ye likhein:
+
+   npm start
+
+8. Deploy ke baad Telegram bot mein /start aur /admin test karein.
+
+IMPORTANT:
+- main.py optional helper hai. Railway ke liye npm start use karein.
+- security.json upload nahi karna hai.
+- Payment/reseller credentials Telegram ke /admin commands se set kar sakte hain.
+- Data reset na ho isliye Railway Volume ke saath DATA_FILE_PATH=/data/store.json
+  set karna recommended hai.
